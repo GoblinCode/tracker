@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Torrent;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HubController extends Controller
 {
@@ -24,11 +25,11 @@ class HubController extends Controller
      * @param $id
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function more($id)
+    public function show($id)
     {
         $hub = Torrent::getPublicId($id);
         $torrent = Torrent::getTorrentByHub($id);
-        return view('hub.more', ['hub' =>$hub, 'torrent' => $torrent]);
+        return view('hub.show', ['hub' =>$hub, 'torrent' => $torrent]);
     }
 
     /**
@@ -36,9 +37,51 @@ class HubController extends Controller
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function store()
+    public function create()
     {
-        return view('hub.store',);
+        return view('hub.create');
     }
-    
+
+
+    /**
+     * Сохранение публикации
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Редактируем публикацию
+     *
+     * @param $id
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Сохранение Изменений
+     *
+     * @param Request $request
+     * @param $id
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Удаление публикации
+     *
+     * @param $id
+     */
+    public function destroy($id)
+    {
+        //
+    }
 }
