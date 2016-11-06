@@ -1,7 +1,7 @@
 /node_modules
 /public/storage
 /public/templates/main
-/resources/views/hub
+/resources/views/user
 
 /vendor
 /.idea
