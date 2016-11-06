@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', ['as' => 'tracker.home', 'uses' => 'HubController@index']);
+Route::get('/hub/show/{id}', ['as' => 'tracker.show', 'uses' => 'HubController@show']);

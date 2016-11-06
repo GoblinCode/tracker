@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Torrent extends Model
 {
@@ -10,15 +11,23 @@ class Torrent extends Model
     protected $fillable = ['name', 'public_id', 'description'];
     
     protected $table = 'public';
-    
+
     /**
+     * Получаем последние публикации
+     */
+    public static function getPublic()
+    {
+       return DB::table('hub')->orderBy('created_at', 'DESC')->where('active','=','1')->paginate(24);
+    }
+    /**
+     * 
      * Получаем id публикации
      *
      * @param $id
      */
     public static function getPublicId($id)
     {
-        return self::where('public_id', '=', $id)->first();
+        return DB::table('hub')->where('id', '=', $id)->first();
     }
 
     /**
@@ -29,6 +38,6 @@ class Torrent extends Model
      */
     public static function getTorrentByHub($id)
     {
-        return DB::table('torrent')->where()->get();
+        return DB::table('torrent')->where('hub_id','=', $id)->get();
     }
 }

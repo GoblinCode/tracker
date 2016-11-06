@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTorrentFilesTable extends Migration
+class CreateCategoryTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,14 @@ class CreateTorrentFilesTable extends Migration
      */
     public function up()
     {
-        Schema::create('torrent_files', function (Blueprint $table)
-        {
+        Schema::create('category', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('torrent_id');
-            $table->string('file_name');
-            $table->bigInteger('size');
+            $table->string('category_id');
+            $table->string('name');
+            $table->text('description');
+            $table->string('module');
+            $table->string('tree');
+            $table->timestamps();
         });
     }
 
@@ -29,6 +31,6 @@ class CreateTorrentFilesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('torrent_files');
+        Schema::drop('category');
     }
 }

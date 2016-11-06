@@ -1,5 +1,8 @@
 /node_modules
 /public/storage
+/public/templates/main
+/resources/views/hub
+
 /vendor
 /.idea
 Homestead.json

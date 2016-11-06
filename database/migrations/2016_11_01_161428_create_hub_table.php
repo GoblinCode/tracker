@@ -24,7 +24,8 @@ class CreateHubTable extends Migration
             $table->integer('view');
             $table->enum('active', ['0','1']);
             $table->string('category_id');
-            $table->integer('count');
+            $table->integer('count_comment');
+            $table->integer('count_torrent');
             $table->timestamps();
         });
     }

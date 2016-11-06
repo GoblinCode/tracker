@@ -15,8 +15,8 @@ class HubController extends Controller
      */
     public function index()
     {
-        $public = DB::table('torrent')->orderBy('created_at', 'DESC')->paginate(24);
-        return view('hub.index', ['public' => $public]);
+        $public = Torrent::getPublic();
+        return view('user.hub.index', ['public' => $public]);
     }
 
     /**
@@ -27,9 +27,9 @@ class HubController extends Controller
      */
     public function show($id)
     {
-        $hub = Torrent::getPublicId($id);
+        $public = Torrent::getPublicId($id);
         $torrent = Torrent::getTorrentByHub($id);
-        return view('hub.show', ['hub' =>$hub, 'torrent' => $torrent]);
+        return view('user.hub.show', ['public' => $public, 'torrent' => $torrent]);
     }
 
     /**

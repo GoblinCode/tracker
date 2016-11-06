@@ -32,7 +32,7 @@ class CreatePeersTable extends Migration
             $table->integer('user_id');
             $table->integer('finish');
             $table->timestamps();
-            $table->timestamp('prev_at');
+            $table->timestamp('prev_at')->nullable();
         });
     }
 
