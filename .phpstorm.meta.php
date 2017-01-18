@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2016-11-01.
+    * Generated on 2017-01-11.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -122,6 +122,8 @@ namespace PHPSTORM_META {
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
             'validation.presence' instanceof \Illuminate\Validation\DatabasePresenceVerifier,
+            'html' instanceof \Collective\Html\HtmlBuilder,
+            'form' instanceof \Collective\Html\FormBuilder,
         ],
         \Illuminate\Contracts\Container\Container::make('') => [
             '' == '@',
@@ -236,6 +238,8 @@ namespace PHPSTORM_META {
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
             'validation.presence' instanceof \Illuminate\Validation\DatabasePresenceVerifier,
+            'html' instanceof \Collective\Html\HtmlBuilder,
+            'form' instanceof \Collective\Html\FormBuilder,
         ],
         \App::make('') => [
             '' == '@',
@@ -350,6 +354,8 @@ namespace PHPSTORM_META {
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
             'validation.presence' instanceof \Illuminate\Validation\DatabasePresenceVerifier,
+            'html' instanceof \Collective\Html\HtmlBuilder,
+            'form' instanceof \Collective\Html\FormBuilder,
         ],
         \app('') => [
             '' == '@',
@@ -464,6 +470,8 @@ namespace PHPSTORM_META {
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
             'validation.presence' instanceof \Illuminate\Validation\DatabasePresenceVerifier,
+            'html' instanceof \Collective\Html\HtmlBuilder,
+            'form' instanceof \Collective\Html\FormBuilder,
         ],
     ];
 }

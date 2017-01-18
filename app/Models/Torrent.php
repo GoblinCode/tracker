@@ -11,6 +11,8 @@ class Torrent extends Model
     protected $fillable = ['name', 'public_id', 'description'];
     
     protected $table = 'public';
+    
+   
 
     /**
      * Получаем последние публикации

@@ -20,7 +20,6 @@ class CreateCategoryTable extends Migration
             $table->text('description');
             $table->string('module');
             $table->string('tree');
-            $table->timestamps();
         });
     }
 

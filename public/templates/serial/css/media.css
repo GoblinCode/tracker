@@ -1,0 +1,419 @@
+@media screen and (min-width: 1200px) {
+    .wrapper {
+        padding: 0 20px;
+    }
+
+    .category #allEntries {
+        text-align: center;
+    }
+
+    #shopmain,
+    .goods-list {
+        text-align: center;
+    }
+
+    .noun {
+        float: none !important;
+    }
+
+    .goods-list .list-item {
+        display: inline-block;
+        float: none !important;
+        margin: 0 20px 40px 20px !important;
+    }
+
+    .tov_desc .item_price {
+        display: block !important;
+        float: none !important;
+    }
+
+    .tov_desc .goodsbutton {
+        display: inline-block;
+        float: none !important;
+        margin: 10px 0 20px 0;
+    }
+
+    footer .social {
+        padding-left: 4.5%;
+    }
+
+    .category #allEntries div[id*="entryID"],
+    .category .archiveEntries div[id*="entryID"] {
+        display: inline-block;
+        float: none !important;
+        margin: 1% !important;
+    }
+
+    .category #uEntriesList .phtTdMain {
+        margin: 0 10px 20px 10px !important;
+    }
+
+    .category #uEntriesList .phtTdMain div[id*="entryID"] {
+        margin: 0 !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        padding: 0 20px;
+    }
+
+
+
+    #shopmain,
+    .goods-list {
+        text-align: center;
+    }
+
+    .noun {
+        float: none !important;
+    }
+
+    .goods-list .list-item {
+        display: inline-block;
+        float: none !important;
+        margin: 0 20px 40px 20px !important;
+    }
+
+    .tov_desc .item_price {
+        display: block !important;
+        float: none !important;
+    }
+
+    .tov_desc .goodsbutton {
+        display: inline-block;
+        float: none !important;
+        margin: 10px 0 20px 0;
+    }
+
+    footer .social {
+        padding-left: 4.5%;
+    }
+
+    .category #allEntries {
+        text-align: center;
+    }
+
+    .category #allEntries div[id*="entryID"],
+    .category .archiveEntries div[id*="entryID"] {
+        display: inline-block;
+        float: none !important;
+        margin: 1% !important;
+    }
+
+    .category #uEntriesList .phtTdMain {
+        margin: 0 10px 20px 10px !important;
+    }
+
+    .category #uEntriesList .phtTdMain div[id*="entryID"] {
+        margin: 0 !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .bx-wrapper .bx-pager {
+        right: auto !important;
+        width: 100% !important;
+    }
+
+    .mainslider .slidetext {
+        bottom: 0;
+        height: auto;
+        padding: 20px 20px 80px 20px;
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+    }
+
+    .mainslider ul li img {
+        width: 100%;
+    }
+
+    .mainslider .bx-wrapper .bx-viewport {
+        background: #fff;
+    }
+
+    header nav {}
+
+    header .mobilemenu {
+        display: block;
+    }
+
+    header nav .uMenuRoot {
+        background: #fff;
+        border: 1px solid #e6eaed;
+        height: auto !important;
+        moz-opacity: 0;
+        o-transition: all 0.7s ease;
+        position: absolute;
+        right: 70px;
+        margin-top:10px;
+        transition: all 0.7s ease;
+        visibility: hidden;
+        webkit-transition: all 0.7s ease;
+        width: auto !important;
+        z-index: 999;
+    }
+
+    header nav .uMenuRoot:before {
+        border: 7px solid transparent;
+        border-bottom: 7px solid #f5f8fa;
+        content: "";
+        display: block;
+        height: 0;
+        margin: -14px 0 0 10px;
+        position: absolute;
+        right: 7px;
+        top: 0;
+        width: 0;
+    }
+
+    header nav .uMenuRoot:after {
+        border: 7px solid transparent;
+        border-bottom: 7px solid #fff;
+        content: "";
+        display: block;
+        height: 0;
+        margin: -13px 0 0 10px;
+        position: absolute;
+        right: 7px;
+        top: 0;
+        width: 0;
+    }
+
+    header nav .uMenuRoot li {
+        display: block !important;
+        float: none !important;
+        height: 35px !important;
+        line-height: 35px !important; margin: 0 !important;
+        padding: 0 !important;
+        width: auto !important;
+    }
+
+    header nav .uMenuRoot li:last-child {
+        border-bottom: none;
+    }
+
+    header nav .uMenuRoot li a {
+        height: 35px !important;
+        line-height: 35px !important;
+        display: block;
+        font-weight: normal;
+        margin: 0 !important;
+        padding: 0 5px !important;
+        white-space: nowrap;
+    }
+
+    header nav .uMenuRoot li a:hover {
+        height: 35px !important;
+        line-height: 35px !important;
+    }
+
+    header nav:hover {
+        cursor: pointer;
+    }
+
+    header .uWithSubmenu ul {
+        background: #fff;
+        margin-left: -150px;
+        margin-top: -35px;
+        right: 100%;
+    }
+
+    header .uWithSubmenu ul:before {
+        background: #fff;
+        border-bottom: 7px solid transparent;
+        border-left: 6px solid #f5f8fa;
+        border-right: 0;
+        border-top: 7px solid transparent;
+        margin: 0;
+        right: -6px;
+        top: 20px;
+    }
+
+    header .uWithSubmenu ul:after {
+        background: #fff;
+        border-bottom: 7px solid transparent;
+        border-left: 7px solid #fff;
+        border-right: 0;
+        border-top: 7px solid transparent;
+        margin: 0;
+        right: -5px;
+        top: 20px;
+    }
+
+    .fFastNavTd {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .tov_imgs,
+    .tov_desc {
+        display: block!important;
+        padding: 0 !important;
+        width: auto!important;
+    }
+
+    .tov_desc h1 {
+        margin: 20px 0 !important;
+    }
+
+    .shop-imgs a:nth-child(2n) {
+        margin: 15px 15px 0 0 !important;
+    }
+
+    .reliz_left {
+        display: table-row !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #main > .wrapper {
+        display: table;
+    }
+
+    #content {
+        margin-bottom: 20px;
+    }
+
+    aside {
+        display: table-footer-group !important;
+        float: none !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    .category #allEntries div[id*="entryID"] {
+        margin: 20px !important;
+
+    }
+
+    article img,
+    .category #allEntries div[id*="entryID"] img {
+        height: 100%;
+        width: 100%;
+    }
+
+    footer .footer_info .wrapper > div {
+        display: block;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    footer .social a {
+        margin: 0 5px 0 0;
+    }
+
+    footer .blogs a {
+        margin: 0 5px;
+    }
+
+    footer .blogs .informer {
+        float: none;
+    }
+
+    footer .social {
+        padding-left: 0 !important;
+    }
+
+    .gDivLeft {
+        _overflow: auto;
+        margin: 0 0 1em;
+        overflow-y: auto;
+        width: 100%;
+    }
+
+    .gTableTop .catLink {
+        padding-left: 16px !important;
+    }
+
+    .gTableTop .catLink:before,
+    .legendBlock {
+        display: none;
+    }
+
+    .forumNamesBar + td {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 680px) {
+
+    #main > .wrapper {
+        display: table;
+    }
+
+    #content {
+        margin-bottom: 20px;
+    }
+
+    aside {
+        display: table-footer-group !important;
+        float: none !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    .category #allEntries div[id*="entryID"] {
+        margin: 1% !important;
+    }
+
+    article img,
+    .category #allEntries div[id*="entryID"] img {
+        height: 100%;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 560px) {
+    #top_left h1 {display:none;}
+
+    header #top_right {
+        float: none !important;
+    }
+
+    header nav {
+        float: right !important;
+    }
+
+    header form {
+        float: none !important;
+    }
+
+    header form input[type=text] {
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    header nav .uMenuRoot {
+        right: 20px !important;
+    }
+
+    #forum_filter form[onsubmit="submit_forum_filter(); return false;"] select {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header #logo {
+        font-size: 24px !important;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+    .copyright .float_right,
+    .copyright .float_left {
+        float: none;
+    }
+
+}

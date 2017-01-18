@@ -16,7 +16,3 @@ Route::get('/', ['as' => 'home', 'uses' => 'HubController@index']);
 Route::get('/hub', ['as' => 'tracker.home', 'uses' => 'HubController@index']);
 Route::get('/hub/show/{id}', ['as' => 'tracker.show', 'uses' => 'HubController@show']);
 Route::get('/hub/create', ['as' => 'tracker.create', 'uses' => 'HubController@create']);
-
-/* ================== Homepage + Admin Routes ================== */
-
-require __DIR__.'/admin_routes.php';

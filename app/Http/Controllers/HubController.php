@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Attach;
 use App\Models\Torrent;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Category;
 
 class HubController extends Controller
 {
+
     /**
      * Главная страница хаба выводит последение публикации
      * 
@@ -25,11 +28,13 @@ class HubController extends Controller
      * @param $id
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function show($id)
+    public function show($id, Attach $attach)
     {
         $public = Torrent::getPublicId($id);
         $torrent = Torrent::getTorrentByHub($id);
-        return view('user.hub.show', ['public' => $public, 'torrent' => $torrent]);
+        $category = Category::getCategoryById($public->category_id);
+        $screen =  $attach->getAttach('hub', $id);
+        return view('user.hub.show', ['public' => $public, 'torrent' => $torrent, 'category' => $category, 'screen' => $screen]);
     }
 
     /**
@@ -39,7 +44,8 @@ class HubController extends Controller
      */
     public function create()
     {
-        return view('hub.create');
+        $category = Category::getCategoryTree();
+        return view('user.hub.create', ['category' => $category]);
     }
 
 

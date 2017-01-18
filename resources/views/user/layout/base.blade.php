@@ -1,97 +1,95 @@
 <?php
-$title ="титл";
+$title = "титл";
 ?>
-<!DOCTYPE html>
-<html lang="ru">
+        <!DOCTYPE html>
+<html class=" webkit chrome win js mdl-js" style="height: auto;">
 <head>
     @include('user.layout.head', ['title' => $title])
-
 </head>
 <body>
-<section class="navbar-wrapper">
-    <div class="open-offcanvas-menu visible-md visible-sm visible-xs" data-toggle="offcanvas">
-        <i class="fa fa-bars"></i>
-    </div>
-    <div class="navbar-logo">
-        <a class="hidden-xs hidden-sm" href="/">{{ $title }}</a>
-        <a href="{{ url('/') }}" class="logo-image"><img src="{{ url('/templates/main/images/modules/tracker.png') }}" alt="Трекер"></a><a>Трекер</a>
+<div id="page" class="fadeIn animated">
+    <!--U1AHEADER1Z-->
+    <header>
+        <div class="wrapper">
+            <section class="profile">
+                <div class="picture">
+                  <!--  <a href="http://movie-groovie.ucoz.com/index/8">
+                        <img class="user-ava" alt="hepoh"
+                             src="./Каталог файлов - Персональный сайт_files/SVpLKh1RtDo.jpg">
+                    </a> -->
 
-    </div>
-    <div class="vertical-divider-navbar"></div>
-
-        <!---  аккаунт  -->
-    <div class="navbar-notification navbar-bell">
-        <i class="fa fa-fw fa-bell navbar-notification-toggle toggle-bell"></i><span class="label label-success notifications-count">0</span>
-        <ul class="dropdown-notifications dropdown-bell" style="display: none;">
-            <li class="dropdown-header"><i class="fa fa-fw fa-bell"></i> Уведомления</li>
-
-        </ul>
-    </div>
-
-    <div class="navbar-notification navbar-search">
-        <i class="fa fa-fw fa-search navbar-notification-toggle toggle-search"></i>
-        <ul class="dropdown-notifications dropdown-search" id="resSearch" style="display: none;">
-            <li class="dropdown-header"><i class="fa fa-fw fa-search"></i> Поиск </li>
-            <li class="dropdown-header">
-                <form action="{{ url('searchpublic') }}" method="post" name="form" onsubmit="return false;">
-                    <div class="input-group" style="padding: 7px;">
-                        <input class="form-control" name="search" type="text" id="search"  placeholder="Публикации">
-                        <span class="input-group-addon" id="basic-addon2">ок</span>
-                    </div>
-                </form>
-            </li>
-            <span id="item-search"></span>
-        </ul>
-    </div>
-
-    <nav class="navbar apps-menu">
-        <ul>
-            <li class="services-menu-toggle">
-                <i class="fa fa-fw fa-th"></i>
-            </li>
-        </ul>
-    </nav>
-
-    <div class="container-fluid services-menu" style="display: none;">
-        <div class="col-xs-12 col-md-8 col-lg-6 col-xs-offset-0 col-md-offset-2 col-lg-offset-3 services-menu-content">
-            <a class="services-menu-content-item dev col-xs-3" href="{{ url('/') }}"><img src="/templates/main/images/modules/tracker.png" alt="Трекер"><br>Трекер</a>
-            <a class="services-menu-content-item dev col-xs-3" href="{{ url('/') }}"><img src="/templates/main/images/modules/forum.png" alt="forum"><br>forum</a>
-            <a class="services-menu-content-item dev col-xs-3" href="{{ url('/') }}"><img src="/templates/main/images/modules/contact.png" alt="contact"><br>contact</a>
-            <a class="services-menu-content-item dev col-xs-3" href="{{ url('/') }}"><img src="/templates/main/images/modules/account.png" alt="account"><br>account</a>
-            <a class="services-menu-content-item dev col-xs-3" href="{{ url('/') }}"><img src="/templates/main/images/modules/recommend.png" alt="recommend"><br>recommend</a>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-    <div class="container-fluid reg-menu" style="display: none;">
-        <div class="col-xs-12 col-md-8 col-lg-6 col-xs-offset-0 col-md-offset-2 col-lg-offset-3 reg-menu-content">
-            <a class="services-menu-content-item @if(isset($tracker)) dev @endif col-xs-3" href='{{ url('/') }}'><img src="/templates/main/images/modules/tracker.png" alt="tracker"><br>Tracker</a>";
-
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</section>
-<div class="services-menu-background"></div>
-<section class="offcanvas-wrapper">
-    <div class="container-fluid">
-        <div class="row row-offcanvas row-offcanvas-left">
-            <aside class="col-xs-6 col-sm-6 col-md-4 col-lg-3 sidebar-offcanvas">
-                @yield('block_left')
-            </aside>
-            <article class="content col-xs-12 col-sm-12 col-md-12 @if(isset($forum)) col-lg-12 @else col-lg-9 @endif ">
-                <div class="content-wrapper">
-                    @yield('open')
-                    @yield('message')
-                    @yield('content')
-                    @yield('block_right')
-                    @yield('close')
                 </div>
-            </article>
-        </div>
-        <div class="clearfix"></div>
-        @include('user.layout.footer')
-    </div>
-</section>
+                <span class="greeting"><a href="http://movie-groovie.ucoz.com/index/8"><b>hepoh</b></a></span>
+                <a href="http://movie-groovie.ucoz.com/index/10" title="Выйти"><i class="fa fa-sign-out"></i></a>
+            </section>
 
-@include('user.layout.scripts')
+            <div id="top_right">
+                <form onsubmit="this.sfSbm.disabled=true" method="get" style="margin:0"
+                      action="http://movie-groovie.ucoz.com/search/">
+                    <input type="text" name="q" maxlength="30" size="20" class="topqueryfield">
+                    <input type="submit" class="searchSbmFl" name="sfSbm" value="Найти" style="display:none;">
+                </form>
+            </div>
+        </div>
+    </header><!--/U1AHEADER1Z-->
+    <div id="main">
+        <div class="wrapper">
+            <!-- <middle> -->
+            <!--U1CLEFTER1Z-->
+            <aside>
+                @yield('right_block')
+
+
+
+
+
+
+
+
+                <!--section class="block">
+                <div class="blocktitle"><i class="fa fa-users"></i> Статистика</div>
+                <div class="blockcontent">
+                <div align="center">
+
+               <div class="tOnline" id="onl1">Онлайн всего: <b>1</b></div> <div class="gOnline" id="onl2">Гостей: <b>0</b></div> <div class="uOnline" id="onl3">Пользователей: <b>1</b></div> <a class="groupUser" href="/index/8-75">hepoh</a>
+                </div>
+                </div>
+                </section-->
+
+            </aside><!--/U1CLEFTER1Z-->
+            <div id="content" class="category">
+                <div id="top_title"><h1 class="fadeInDownBig animated">Каталог файлов</h1></div>
+                <!-- <body> -->
+
+
+                    @yield('content')
+                <!-- </body> -->
+                <span class="pagesBlockuz2"></span>
+            </div>
+            <!-- </middle> -->
+        </div>
+        <!--//endwrapper-->
+    </div>
+    <!--//endmain-->
+</div>
+<!--//endpage-->
+<div class="page-buffer"></div>
+<!--footer-->
+<footer id="footer">
+    <div class="go-top">
+        <a href="#" id="goTop" class="fa fa-angle-double-up fa-2x">
+        </a>
+    </div>
+    <div class="copyright">
+        <div class="wrapper">
+            <div class="float_left">Design: <a href="http://utemplate.pro/shop/595/desc/lite-film">DC Themes</a></div>
+            <div class="float_right"><a href="http://movie-groovie.ucoz.com/index/0-2">О сайте</a> | <a
+                        href="http://movie-groovie.ucoz.com/index/0-3">Обратная связь</a> | <!-- "' --><span
+                        class="pb5fFl9i">Хостинг от <a href="http://www.ucoz.ru/">uCoz</a></span></div>
+        </div>
+    </div>
+</footer>
+<script src="{{ url('templates/main/js/jquery.js') }}"></script>
+
 </body>
 </html>
