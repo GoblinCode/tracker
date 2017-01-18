@@ -1,29 +1,25 @@
 <?php
+/**
+ * Model genrated using LaraAdmin
+ * Help: http://laraadmin.com
+ */
 
 namespace App\Models;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class User extends Authenticatable
+class User extends Model
 {
-    use Notifiable;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password',
+    use SoftDeletes;
+	
+	protected $table = 'users';
+	
+	protected $hidden = [
+        
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+	protected $guarded = [];
+
+	protected $dates = ['deleted_at'];
 }
